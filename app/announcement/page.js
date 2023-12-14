@@ -14,7 +14,7 @@ export default function Announcement() {
       <main className="pt-[8rem]">
         <h1 className="text-center font-bold text-big">hello word</h1>
         <section className="md:flex justify-between lg:mt-large px-small">
-          <Card />
+          {/* <Card />
           <br></br>
           <Card />
           <br></br>
@@ -22,7 +22,7 @@ export default function Announcement() {
           <br></br>
           <Card />
           <br></br>
-          <Card />
+          <Card /> */}
         </section>
         <br></br>
         <div className="text-center">

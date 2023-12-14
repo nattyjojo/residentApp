@@ -5,7 +5,6 @@ import localhost from "../lib/host";
 
 const BlogCard = (postData, index) => {
   const post = postData.postData;
-  console.log({ check: post.bannerName });
   const [displayContent, setDisplayContent] = useState(false);
   const dropDownMenustyle =
     " bg-[#292626] bg-[rgba(0,0,0,1)]  font-bold flex flex-col justify-center  text-center text-big left-0 absolute w-[98.70vw] h-[100vh] top-20 rounded px-smallest";
