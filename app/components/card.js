@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import localhost from "../lib/host";
 
 const BlogCard = (postData, index) => {
   const post = postData.postData;
@@ -14,7 +15,6 @@ const BlogCard = (postData, index) => {
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
     WebkitLineClamp: 3,
-    // Fallback for non-WebKit browsers
   };
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -38,11 +38,11 @@ const BlogCard = (postData, index) => {
       <div className="flex justify-around bg-sky-600 rounded">
         <Image
           style={{ width: "100%", borderRadius: "10px" }}
-          src={`http://localhost:5000/banner/${post.bannerName}`}
+          src={`${localhost}banner/${post.bannerName}`}
           alt={`${post.title}`}
           height={100}
           width={100}
-          crossOrigin={"http://localhost:5000/admin"}
+          crossOrigin={`${localhost}admin`}
         />
       </div>
 

@@ -1,13 +1,13 @@
 import axios from "axios";
-
+import localhost from "./host";
 const getUser = async () => {
   const getCooKie = document.cookie;
-
+  console.log(getCooKie);
   if (getCooKie) {
     const cookie = getCooKie.split("=")[1];
     try {
       const postdata = await axios.post(
-        "http://localhost:5000/get-user",
+        `${localhost}get-user`,
         { cookie: cookie },
         {
           withCredentials: true,

@@ -11,6 +11,7 @@ import handleGetPosts from "../lib/handleGetPosts";
 import randomChar from "../lib/randomChar";
 import FormData from "form-data";
 import DOMPurify from "dompurify";
+import localhost from "../lib/host";
 
 import { FaBold, FaLink, FaImages, FaHeading } from "react-icons/fa6";
 import { GrBlockQuote } from "react-icons/gr";
@@ -238,11 +239,11 @@ const AddminDashBoardLayout = (children) => {
                       >
                         <td className="">
                           <Image
-                            src={`http://localhost:5000/banner/${post.bannerName}`}
+                            src={`${localhost}banner/${post.bannerName}`}
                             alt={`${post.title}`}
                             width={100}
                             height={100}
-                            crossOrigin={"http://localhost:5000/admin"}
+                            crossOrigin={`${localhost}admin`}
                           />
                         </td>
                         <td>{post.title}</td>
@@ -303,11 +304,11 @@ const AddminDashBoardLayout = (children) => {
                       <tr key={index} className="text-center font-bold">
                         <td>
                           <Image
-                            src={`http://localhost:5000/banner/${post.bannerName}`}
+                            src={`${localhost}banner/${post.bannerName}`}
                             alt={`${post.title}`}
                             width={50}
                             height={50}
-                            crossOrigin={"http://localhost:5000/admin"}
+                            crossOrigin={`${localhost}admin`}
                           />
                         </td>
                         <td>{post.title}</td>
@@ -368,7 +369,7 @@ const AddminDashBoardLayout = (children) => {
                       <td>{resident.date.split("T")[0]}</td>
                       <td>
                         <Image
-                          src={`http://localhost:5000/idCards/${resident.files.idCardData.filename}`}
+                          src={`${localhost}idCards/${resident.files.idCardData.filename}`}
                           alt="im"
                           width={50}
                           height={50}

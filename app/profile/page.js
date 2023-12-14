@@ -25,6 +25,7 @@ const Profile = () => {
         const getUserData = await getUser();
         const userData = getUserData.data;
         if (userData === null || userData === "") {
+          console.log("jkjkjkj");
           logOut();
           router.push("/");
           return;

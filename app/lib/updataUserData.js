@@ -1,7 +1,8 @@
 import axios from "axios";
+import localhost from "./host";
 const updataUserData = async (formData) => {
   const postUserData = await axios.post(
-    "http://localhost:5000/update-user-data",
+    `${localhost}update-user-data`,
     formData,
     {
       headers: {

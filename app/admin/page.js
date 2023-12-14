@@ -16,7 +16,7 @@ const AddminDashBoard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await refreshCookie();
+        //await refreshCookie();
         const getUserData = await getUser();
         const userData = getUserData.data;
 
