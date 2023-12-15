@@ -5,6 +5,8 @@ const updataUserData = async (formData) => {
     `${localhost}update-user-data`,
     formData,
     {
+      withCredentials: true,
+
       headers: {
         "Content-Type": "multipart/form-data",
       },
