@@ -21,22 +21,20 @@ export default function Home() {
     handleFetchPost();
   }, []);
   const style = {
-    card: "text-center mb-small rounded p-small  font-bold text-small",
+    card: "text-center rounded p-small  lg:mt-[10%] font-bold text-small",
   };
   return (
     <main>
       <Header />
-
-      <section className="p-smallest pt-small">
-        Hero section
+      <section className="p-smallest pt-bigger">
         <section className={style.card}>
           <Hero />
         </section>
         slide section
-        <section className={style.card}>
+        <section className="text-center rounded p-small lg:mt-[5%] font-bold text-small">
           <Slide />
         </section>
-        <section className=" md:flex md:justify-center  gap-3  md:flex-wrap">
+        <section className=" md:flex md:justify-center gap-3 md:flex-wrap">
           {/* <Card /> */}
         </section>
       </section>

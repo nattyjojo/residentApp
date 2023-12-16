@@ -34,7 +34,7 @@ const HamburgerButton = (children) => {
   };
 
   return (
-    <div className="z-10  font-bold">
+    <div className="z-10  font-bold pt-[20px]">
       <button onClick={() => handleButton()} className="text-small sm:hidden">
         {isVisible ? <GiHamburgerMenu /> : <CgClose />}
       </button>
