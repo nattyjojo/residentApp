@@ -1,2 +1,2 @@
-const localhost = "https://funny-madeleine-e88430.netlify.app/";
+const localhost = "https://residentapi.johnchimezie.online/";
 export default localhost;
