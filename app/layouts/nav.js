@@ -8,7 +8,7 @@ const NavHamburger = () => {
   return (
     <nav className="flex justify-between fixed  top-0 left-0 py-smallest px-smallest border-b w-[100%] bg-black ">
       <Link href={"/"}>
-        <h1 className="text-[50px]  font-bold">
+        <h1 className="text-[50px] hover:text-blue-900 font-bold" title="home">
           <MdOutlineRealEstateAgent />
         </h1>
       </Link>

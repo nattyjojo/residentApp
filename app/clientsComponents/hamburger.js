@@ -36,7 +36,14 @@ const HamburgerButton = (children) => {
   return (
     <div className="z-10  font-bold pt-[20px]">
       <button onClick={() => handleButton()} className="text-small sm:hidden">
-        {isVisible ? <GiHamburgerMenu /> : <CgClose />}
+        {isVisible ? (
+          <GiHamburgerMenu
+            className="hover:text-blue-900 font-bold"
+            title="menu"
+          />
+        ) : (
+          <CgClose className="text-blue-900 font-bold" title="close" />
+        )}
       </button>
 
       <ul className={isVisible ? "hidden" : dropDownMenustyle}>

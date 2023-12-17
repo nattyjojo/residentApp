@@ -21,7 +21,7 @@ export default function Home() {
     handleFetchPost();
   }, []);
   const style = {
-    card: "text-center rounded p-small  lg:mt-[10%] font-bold text-small",
+    card: "text-center rounded  flex justify-around  p-small  h-[30vh] md:h-[100vh] font-bold text-small",
   };
   return (
     <main>
@@ -30,8 +30,7 @@ export default function Home() {
         <section className={style.card}>
           <Hero />
         </section>
-        slide section
-        <section className="text-center rounded p-small lg:mt-[5%] font-bold text-small">
+        <section className="text-center rounded p-small flex justify-around  h-[50vh] font-bold text-big  overflow-hidden">
           <Slide />
         </section>
         <section className=" md:flex md:justify-center gap-3 md:flex-wrap">

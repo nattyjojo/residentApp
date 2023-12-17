@@ -18,7 +18,7 @@ const Footer = () => {
         </ul>
       </section>
       <section className="hidden sm:block">
-        <h6 className="mb-smallest font-bold">Contact Us</h6>
+        <h6 className="mb-smallest font-bold">Contact</h6>
         <p>
           <GiRotaryPhone className="inline mr-smallest" />
           +1233444555
@@ -36,11 +36,15 @@ const Footer = () => {
       </section>
 
       <section>
-        <h1 className="mb-smallest font-bold">refrences</h1>
+        <h1 className="mb-smallest font-bold">Refrences</h1>
         <ul>
           <ListLink href="/" content="Sitemap" />
-          <ListLink href="/blog" content="Blog" />
-          <ListLink href="/about" content="About Us" />
+          <ListLink
+            href="https://nattyjojo.github.io/portfolio/"
+            content="Portfolio"
+            target="_blank"
+          />
+          <ListLink href="" content="Beqanda" />
           <ListLink href="/contact" content="Contact" />
           <ListLink href="/login" content="Login" />
           <ListLink href="/register" content="Register" />

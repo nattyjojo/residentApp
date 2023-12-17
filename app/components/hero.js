@@ -1,14 +1,19 @@
 import LargeButton from "./buttonLarge";
 const Hero = () => {
-  //const currentTime = currentTime();
   return (
-    <h1 className="w-[70%] ml-[15%] text-smallest font-[200] lg:text-big md:text-big">
-      Unlock seamless resident management with our all-encompassing software
-      platform, tailored for your convenience.
-      <div className="mt-[10px] text-small font-bold">
+    <section className="pt-[25vh]">
+      <h1 className="text-smallest md:text-big  md:font-[300] font-[300] whitespace-nowrap overflow-hidden">
+        Resident Management
+        <i className="inline text-smallest font-[200]" /> !<i />
+        <br></br>
+        Seamless with Our All-encompassing Software <br></br> platform, tailored
+        for Your convenience.
+      </h1>
+
+      <div className="mt-[15px] text-small font-bold">
         <LargeButton link={"/about"} content={"Learn More"} />
       </div>
-    </h1>
+    </section>
   );
 };
 export default Hero;
