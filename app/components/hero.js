@@ -1,7 +1,7 @@
 import LargeButton from "./buttonLarge";
 const Hero = () => {
   return (
-    <section className="pt-[25vh]">
+    <section className="md:pt-[25vh]">
       <h1 className="text-smallest md:text-big  md:font-[300] font-[300] whitespace-nowrap overflow-hidden">
         Resident Management
         <i className="inline text-smallest font-[200]" /> !<i />
