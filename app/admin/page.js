@@ -34,7 +34,7 @@ const AddminDashBoard = () => {
         setAdminData(getUserData);
         //const profileCompleted = userData.profileCompleted;
         // if (!profileCompleted) {
-        //   setProfileData(userData);
+        //   setProfileData(userData);llllllllllll
         //   setCompleteProfile(true);
         // } else {
         //   setProfileData(userData);
