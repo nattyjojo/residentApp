@@ -12,6 +12,8 @@ import randomChar from "../lib/randomChar";
 import FormData from "form-data";
 import DOMPurify from "dompurify";
 import localhost from "../lib/host";
+import Table from "../components/table";
+import Loading from "../components/loading";
 
 import { FaBold, FaLink, FaImages, FaHeading } from "react-icons/fa6";
 import { GrBlockQuote } from "react-icons/gr";
@@ -56,7 +58,7 @@ const AddminDashBoardLayout = (children) => {
       setGetUsers(null);
     };
     const fetchPosts = async () => {
-      const getPosts = await handleGetPosts();
+      const getPosts = await handleGetPosts("all");
       setPosts(getPosts.data);
       setGetPosts(null);
     };
@@ -127,10 +129,12 @@ const AddminDashBoardLayout = (children) => {
       }
     }
   };
+
   const buttonStyle =
     "border m-2 w-[20%] font-bold rounded px-smallest py-2 text-blue-500 hover:text-inherit hover:bg-blue-900";
+
   return (
-    <main className="pt-[15rem] flex gap-smallest justify-between px-smallest">
+    <main className="pt-[15rem] flex gap-smallest justify-between px-smallest h-100vh">
       <section className="border w-[30%]">
         <div className="flex justify-around">
           {/* <Image
@@ -215,65 +219,7 @@ const AddminDashBoardLayout = (children) => {
           }`}
         >
           {/* Post */}
-
-          <table className="w-[100%] h-[20vh]">
-            <thead className="text-[blue] border-2 bg-[black]">
-              <tr className="">
-                <th>Banner</th>
-                <th>Tittle</th>
-                <th>Content</th>
-                <th>Date</th>
-                <th>Poster</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody className="h-[40vh] overflow-scroll">
-              {posts
-                ? posts.map((post, index) => {
-                    return post.postType === "post" ? (
-                      <tr
-                        key={index}
-                        className="text-center font-bold border border-[black] "
-                      >
-                        <td className="">
-                          <Image
-                            src={`${localhost}banner/${post.bannerName}`}
-                            alt={`${post.title}`}
-                            width={100}
-                            height={100}
-                            crossOrigin={`${localhost}admin`}
-                          />
-                        </td>
-                        <td>{post.title}</td>
-                        <td
-                          className="line-clamp-2 overflow-hidden"
-                          dangerouslySetInnerHTML={{ __html: post.content }}
-                        ></td>
-                        <td>{post.date.split("T")[0]}</td>
-                        <td>{post.poster}</td>
-                        <td>
-                          <button className="border-2 px-2 bg-[green] rounded-full font-bold">
-                            View
-                          </button>
-                        </td>
-                        <td>
-                          <button className="border-2 px-2 bg-[green] rounded-full font-bold">
-                            Edit
-                          </button>
-                        </td>
-                        <td>
-                          <button className="border-2 px-2 bg-[red]  rounded-full font-bold">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    ) : null;
-                  })
-                : null}
-            </tbody>
-          </table>
+          <Table content={posts} postType={"post"} />
         </section>
         <section
           className={`bg-[gray] mt-3 ${
@@ -281,62 +227,7 @@ const AddminDashBoardLayout = (children) => {
           }`}
         >
           {/* ANOUNSGSGSG */}
-
-          <table className="w-[100%]">
-            <thead>
-              <tr className="text-[blue] border-2 bg-[black]">
-                <th>Banner</th>
-                <th>Tittle</th>
-                <th>Content</th>
-                <th>Date</th>
-                <th>Poster</th>
-                <th></th>
-                <th></th>
-                <th></th>
-
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {posts
-                ? posts.map((post, index) => {
-                    return post.postType === "aunousment" ? (
-                      <tr key={index} className="text-center font-bold">
-                        <td>
-                          <Image
-                            src={`${localhost}banner/${post.bannerName}`}
-                            alt={`${post.title}`}
-                            width={50}
-                            height={50}
-                            crossOrigin={`${localhost}admin`}
-                          />
-                        </td>
-                        <td>{post.title}</td>
-
-                        <td>{post.content}</td>
-                        <td>{post.date.split("T")[0]}</td>
-                        <td>{post.poster}</td>
-                        <td>
-                          <button className="border-2 px-2 bg-[green] rounded-full font-bold">
-                            View
-                          </button>
-                        </td>
-                        <td>
-                          <button className="border-2 px-2 bg-[green] rounded-full font-bold">
-                            Edit
-                          </button>
-                        </td>
-                        <td>
-                          <button className="border-2 px-2 bg-[red]  rounded-full font-bold">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    ) : null;
-                  })
-                : null}
-            </tbody>
-          </table>
+          <Table content={posts} postType={"aunousment"} />
         </section>
 
         <section
@@ -491,5 +382,3 @@ const AddminDashBoardLayout = (children) => {
   );
 };
 export default AddminDashBoardLayout;
-
-// https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png

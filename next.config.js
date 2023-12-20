@@ -9,8 +9,11 @@ module.exports = {
     ],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "funny-madeleine-e88430.netlify.app",
+        // protocol: "https",
+        // hostname: "funny-madeleine-e88430.netlify.app",
+        // pathname: "/",
+        protocol: "http",
+        hostname: "localhost:8888",
         pathname: "/",
       },
     ],

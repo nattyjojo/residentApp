@@ -2,7 +2,7 @@ import Header from "../components/header";
 import MainFooter from "../components/Footer";
 export const metadata = {
   title: "about",
-  description: "foyer saleh about us page",
+  description: "ResidentApp about us page",
 };
 
 const About = () => {

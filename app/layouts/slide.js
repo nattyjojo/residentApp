@@ -1,38 +1,49 @@
 import { FcNext, FcPrevious } from "react-icons/fc";
+import { useState } from "react";
+import localhost from "../lib/host";
 import Image from "next/image";
-const Slide = (anuonsment) => {
+const Slide = (post) => {
+  let [current, setCurrent] = useState(0);
+  const postContent = post.posts;
   const Bgsrc =
     "https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52379.jpg?w=996&t=st=1696240002~exp=1696240602~hmac=624c76a932a7d539958ad149cac228887193dd9942fd4236fff62941f13720f2";
-  //absolute right-10 top-[45%]
   return (
     <div
       style={{
-        backgroundImage: `url(${Bgsrc})`,
+        backgroundImage: `url(${localhost}files/banner/${postContent[current].bannerName})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        height: "fit-content",
+        backgroundPositionY: "center",
+        backgroundPositionX: "center",
+        backgroundSize: "400px 300px",
+        objectFit: "cover",
+        border: "2px solid red",
+        margin: "20px 0",
       }}
       className=" flex text-white rounded "
     >
-      <button className=" p-smallest rounded-full text-[100px]">
+      <button
+        onClick={() => (current !== 0 ? setCurrent((current -= 1)) : null)}
+        className=" p-smallest rounded-full text-[40px]  md:text-[100px]"
+      >
         <FcPrevious />
       </button>
       <section>
-        <h2 className=""> Blog Post title</h2>
-        <p className="text-gray border">
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
+        <h2 className="h-[50px] overflow-hidden">
+          {postContent[current].title}{" "}
+        </h2>
+        <p className="text-gray  h-[20vh] md:h-[40vh] overflow-hidden">
+          {postContent[current].content}
         </p>
       </section>
 
-      <button className=" p-smallest rounded-full text-[100px]">
+      <button
+        onClick={() => {
+          current !== postContent.length - 1
+            ? setCurrent((current += 1))
+            : setCurrent(current);
+        }}
+        className=" p-smallest rounded-full text-[40px]  md:text-[100px]"
+      >
         <FcNext />
       </button>
     </div>
