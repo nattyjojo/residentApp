@@ -5,12 +5,10 @@ import Image from "next/image";
 const Slide = (post) => {
   let [current, setCurrent] = useState(0);
   const postContent = post.posts;
-  const Bgsrc =
-    "https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52379.jpg?w=996&t=st=1696240002~exp=1696240602~hmac=624c76a932a7d539958ad149cac228887193dd9942fd4236fff62941f13720f2";
   return (
     <div
       style={{
-        backgroundImage: `url(${localhost}files/banner/${postContent[current].bannerName})`,
+        backgroundImage: `url(${localhost}files/userFiles/banner/${postContent[current].bannerName})`,
         backgroundRepeat: "no-repeat",
         backgroundPositionY: "center",
         backgroundPositionX: "center",

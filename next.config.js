@@ -5,7 +5,6 @@ module.exports = {
       "lh3.googleusercontent.com",
       "images.ctfassets.net",
       "localhost",
-      "funny-madeleine-e88430.netlify.app",
       "johnchimezie.online",
       "residentapi.johnchimezie.online",
     ],
@@ -13,12 +12,13 @@ module.exports = {
       {
         protocol: "https",
         hostname: "residentapi.johnchimezie.online",
-        //pathname: "/",
+        pathname: "/userFiles",
         // protocol: "http",
         // hostname: "localhost:8888",
-        // pathname: "/",
+        //pathname: "/",
       },
     ],
   },
 };
+// host
 //module.exports = { images: { domains: ['example.com'], formats: ['image/avif', 'image/webp'], }, }
