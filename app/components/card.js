@@ -46,12 +46,12 @@ const BlogCard = (postData, index) => {
               maxHeight: "250px",
               borderRadius: "10px",
             }}
-            src={`${localhost}files/banner/${post.bannerName}`}
+            src={`${localhost}userFile/banner/${post.bannerName}`}
             alt={`${post.title}`}
             height={100}
             width={100}
             crossOrigin={`${localhost}`}
-            objectFit="cover"
+            // objectFit="cover"
           />
         </div>
 

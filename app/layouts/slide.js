@@ -8,7 +8,7 @@ const Slide = (post) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${localhost}files/userFiles/banner/${postContent[current].bannerName})`,
+        backgroundImage: `url(${localhost}userFile/banner/${postContent[current].bannerName})`,
         backgroundRepeat: "no-repeat",
         backgroundPositionY: "center",
         backgroundPositionX: "center",
@@ -27,7 +27,7 @@ const Slide = (post) => {
       </button>
       <section>
         <h2 className="h-[50px] overflow-hidden">
-          {postContent[current].title}{" "}
+          {postContent[current].title}
         </h2>
         <p className="text-gray  h-[20vh] md:h-[40vh] overflow-hidden">
           {postContent[current].content}

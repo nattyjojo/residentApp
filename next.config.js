@@ -13,7 +13,7 @@ module.exports = {
         protocol: "https",
         hostname: "residentapi.johnchimezie.online",
         pathname: "/userFiles",
-        // protocol: "http",
+        //protocol: "https",
         // hostname: "localhost:8888",
         //pathname: "/",
       },
