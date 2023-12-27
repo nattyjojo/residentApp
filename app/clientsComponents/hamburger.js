@@ -132,10 +132,10 @@ const HamburgerButton = (children) => {
           />
         ) : (
           <ListLink
-            href={`${"/" + userType.userType}`}
+            href={`${"/" + userType}`}
             content={"DashBoard"}
             border={
-              currentPath === `${"/" + userType.userType}`
+              currentPath === `${"/" + userType}`
                 ? "border-b text-blue-500 "
                 : ""
             }
