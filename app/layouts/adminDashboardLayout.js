@@ -134,7 +134,7 @@ const AddminDashBoardLayout = (children) => {
     "border m-2 w-[20%] font-bold rounded px-smallest py-2 text-blue-500 hover:text-inherit hover:bg-blue-900";
 
   return (
-    <main className="pt-[15rem] flex gap-smallest justify-between px-smallest h-100vh">
+    <main className="pt-[15rem] flex gap-smallest justify-between px-smallest h-[100vh]">
       <section className="border w-[30%]">
         <div className="flex justify-around">
           {/* <Image
