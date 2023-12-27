@@ -149,7 +149,6 @@ const HamburgerButton = (children) => {
             }}
           >
             <ListLink
-              href={"/"}
               content={"Logout"}
               border={
                 currentPath === "/login" ? "border-b text-blue-500 " : " "

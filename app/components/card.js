@@ -6,13 +6,11 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 const BlogCard = (postData) => {
-  console.log(postData.data);
   const post = postData.data;
   const postId = postData.data._id;
   const postTittle = postData.data.title.split(" ");
 
   const [displayContent, setDisplayContent] = useState(false);
-  // const dropDownMenustyle =" bg-[#292626] bg-[rgba(0,0,0,1)]  font-bold flex flex-col justify-center  text-center text-big left-0 absolute w-[98.70vw] h-[100vh] top-20 rounded px-smallest";
   const normalMenuStyle =
     "border p-smallest flex-[25%] m-3  md:max-w-[25vw] text-center rounded shadow-md";
   const paragraphStyle = {
