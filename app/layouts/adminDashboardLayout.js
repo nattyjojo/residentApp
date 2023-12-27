@@ -152,10 +152,10 @@ const AddminDashBoardLayout = (children) => {
           <p>{children.data.data.email}</p>
         </div>
       </section>
-      <section className="w-[70%] ">
+      <section className="w-[70%] overflow-scroll">
         <ul
           onClick={(event) => setCurrentTask(event.target.id)}
-          className="font-bold bg-slate-600 py-smallest px-2 rounded text-[green] flex justify-between"
+          className="font-bold bg-slate-600 py-smallest  px-2 rounded text-[green] flex justify-between"
         >
           <button
             id={"post"}
