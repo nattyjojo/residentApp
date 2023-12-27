@@ -86,6 +86,7 @@ const HamburgerButton = (children) => {
         {isValid ? (
           <div
             onClick={() => {
+              setIsvalid(!isValid);
               logOut();
             }}
           >
