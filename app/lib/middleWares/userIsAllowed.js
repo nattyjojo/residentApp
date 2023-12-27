@@ -8,8 +8,6 @@ const userIsAllowed = () => {
   }
   if (userCookie.length > 0) {
     const verifyUser = validateCookie();
-    console.log({ verifyUser: verifyUser });
-    //console.log({ hascookie: document.cookie.length });
   }
 };
 export default userIsAllowed;

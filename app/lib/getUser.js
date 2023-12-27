@@ -2,7 +2,6 @@ import axios from "axios";
 import localhost from "./host";
 const getUser = async () => {
   const getCooKie = document.cookie;
-  console.log(getCooKie);
   if (getCooKie) {
     const cookie = getCooKie.split("=")[1];
     try {
