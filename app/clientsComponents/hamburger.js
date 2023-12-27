@@ -87,11 +87,12 @@ const HamburgerButton = (children) => {
           <div
             onClick={() => {
               setIsvalid(!isValid);
+              setUserType(!userType);
               logOut();
             }}
           >
             <ListLink
-              href={"/"}
+              href={"#"}
               content={"Logout"}
               border={
                 currentPath === "/login" ? "border-b text-blue-500 " : " "
@@ -149,6 +150,7 @@ const HamburgerButton = (children) => {
             }}
           >
             <ListLink
+              href={"/"}
               content={"Logout"}
               border={
                 currentPath === "/login" ? "border-b text-blue-500 " : " "
