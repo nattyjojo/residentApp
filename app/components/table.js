@@ -26,7 +26,7 @@ const Table = (content) => {
               >
                 <td>
                   <Image
-                    src={`${localhost}files/banner/${post.bannerName}`}
+                    src={`${localhost}userFile/banner/${post.bannerName}`}
                     alt={`${post.title}`}
                     width={100}
                     height={100}

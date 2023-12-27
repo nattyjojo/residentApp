@@ -68,9 +68,7 @@ const Home = () => {
                   data={post}
                   index={index}
                   key={index}
-                  // textSection={"w-[60%] pl-[10px]"}
-                  // toFlex={"flex"}
-                  // imageHeight={"100%"}
+                  imageHeight={"100% "}
                 />
               ) : null
             )}

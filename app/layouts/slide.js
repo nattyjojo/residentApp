@@ -12,9 +12,8 @@ const Slide = (post) => {
         backgroundRepeat: "no-repeat",
         backgroundPositionY: "center",
         backgroundPositionX: "center",
-        backgroundSize: "400px 300px",
+        backgroundSize: "100%",
         objectFit: "cover",
-        border: "2px solid red",
         margin: "20px 0",
       }}
       className=" flex text-white rounded "
@@ -25,11 +24,11 @@ const Slide = (post) => {
       >
         <FcPrevious />
       </button>
-      <section>
+      <section className="">
         <h2 className="h-[50px] overflow-hidden">
           {postContent[current].title}
         </h2>
-        <p className="text-gray  h-[20vh] md:h-[40vh] overflow-hidden">
+        <p className="text-gray  h-[20vh] md:h-[50vh] overflow-hidden">
           {postContent[current].content}
         </p>
       </section>

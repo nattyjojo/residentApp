@@ -21,33 +21,42 @@ const Footer = () => {
         <h6 className="mb-smallest font-bold">Contact</h6>
         <p>
           <GiRotaryPhone className="inline mr-smallest" />
-          +1233444555
+          +3246-5930‑33
         </p>
 
         <p>
           <MdMarkEmailUnread className="inline mr-smallest" />
-          yourmail@gmail.com
+          chimeziejohn731@gmail.com
         </p>
 
         <p>
           <FcHome className="inline mr-smallest" />
-          your address, city
+          Brussels, Belgium
         </p>
       </section>
 
       <section>
         <h1 className="mb-smallest font-bold">Refrences</h1>
         <ul>
-          <ListLink href="/" content="Sitemap" />
           <ListLink
             href="https://nattyjojo.github.io/portfolio/"
             content="Portfolio"
             target="_blank"
           />
-          <ListLink href="" content="Beqanda" />
-          <ListLink href="/contact" content="Contact" />
-          <ListLink href="/login" content="Login" />
-          <ListLink href="/register" content="Register" />
+          <ListLink
+            href="https://whimsical-melomakarona-344a50.netlify.app/"
+            content="Beqanda"
+          />
+          <ListLink href="https://becode.org/" content="Becode" />
+          <ListLink
+            href="https://linkedin.com/in/john-chimezie-72b36a280"
+            content="Linkedin"
+          />
+          <ListLink
+            href="https://github.com/nattyjojo?tab=repositories"
+            content="Repo"
+          />
+          <ListLink href="/" content="End" />
         </ul>
       </section>
     </main>
