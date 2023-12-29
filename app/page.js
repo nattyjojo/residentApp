@@ -53,7 +53,6 @@ const Home = () => {
   }
 
   if (!isLoading) {
-    console.log(posts);
     return (
       <main>
         <Header />
