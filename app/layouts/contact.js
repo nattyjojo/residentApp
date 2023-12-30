@@ -31,8 +31,6 @@ const ContactLayout = () => {
           <form
             onSubmit={(event) => {
               event.preventDefault();
-
-              console.log(signUpData);
             }}
             className=" border  rounded p-small"
           >

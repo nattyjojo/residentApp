@@ -6,11 +6,10 @@ import MainFooter from "@/app/components/Footer";
 import { useEffect, useState } from "react";
 import getSinglePost from "@/app/lib/getSinglepost";
 import Loading from "@/app/components/loading";
-// export const metadata = {
-//   title: "about",
-//   description: "ResidentApp about us page",
-// };
-
+export const metadata = {
+  title: "residentApp | Blog",
+  description: "ResidentApp about us page",
+};
 const Post = () => {
   const [post, setPost] = useState();
   const postID = useParams().id;

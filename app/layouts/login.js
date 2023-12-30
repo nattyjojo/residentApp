@@ -6,6 +6,12 @@ import handleLogin from "../lib/handleLogin";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import validateCookie from "../lib/validateCookie";
+import Loading from "../components/loading";
+
+export const metadata = {
+  title: "Login",
+  description: "Login page",
+};
 
 const Login = () => {
   const router = useRouter();
@@ -35,7 +41,7 @@ const Login = () => {
   }, []);
   if (!showLogin) {
     // remember to add animation
-    return <h1>LOADING....</h1>;
+    return <Loading />;
   }
 
   if (showLogin) {

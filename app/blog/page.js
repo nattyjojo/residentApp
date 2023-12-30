@@ -7,10 +7,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import handleGetPosts from "../lib/handleGetPosts";
 import Image from "next/image";
-// export const metadata = {
-//   title: "blog",
-//   description: "announcement page",
-// };
+const metadata = {
+  title: "ResidentApp | Blog",
+  description: "announcement page",
+};
 
 export default function Blog() {
   const [posts, setPosts] = useState(null);
@@ -19,7 +19,6 @@ export default function Blog() {
     const fetchPosts = async () => {
       const posts = await handleGetPosts();
       if (posts) {
-        console.log({ posts: posts });
         setPosts(posts.data);
       }
     };

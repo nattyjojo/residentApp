@@ -1,7 +1,7 @@
 import Registeration from "../layouts/registeration";
 export const metadata = {
-  title: "register",
-  description: "foyer saleh registeration page",
+  title: "ResidentApp | Register",
+  description: "ResidentApp registeration page",
 };
 
 const Register = () => {

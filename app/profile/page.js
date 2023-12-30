@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import getUser from "../lib/getUser";
 import UpdateData from "../layouts/updateData";
 import refreshCookie from "../lib/refreshCookie";
-import { Ref } from "react";
 import logOut from "../lib/logOut";
 
 const Profile = () => {
@@ -25,7 +24,6 @@ const Profile = () => {
         const getUserData = await getUser();
         const userData = getUserData.data;
         if (userData === null || userData === "") {
-          console.log("jkjkjkj");
           logOut();
           router.push("/");
           return;

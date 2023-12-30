@@ -282,7 +282,6 @@ const AddminDashBoardLayout = (children) => {
 
         <form
           onSubmit={(event) => {
-            console.log(event.target.value);
             event.preventDefault();
             handlePost(postFormData);
           }}
