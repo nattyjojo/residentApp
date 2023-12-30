@@ -1,5 +1,5 @@
 import Registeration from "../layouts/registeration";
-export const metadata = {
+const metadata = {
   title: "ResidentApp | Register",
   description: "ResidentApp registeration page",
 };

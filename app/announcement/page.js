@@ -2,7 +2,7 @@ import Header from "../components/header";
 import MainFooter from "../components/Footer";
 import Card from "../components/card";
 import SmallButton from "../components/smallButton";
-export const metadata = {
+const metadata = {
   title: "announcement",
   description: "announcement page",
 };

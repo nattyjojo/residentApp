@@ -1,6 +1,6 @@
 import Header from "../components/header";
 import MainFooter from "../components/Footer";
-export const metadata = {
+const metadata = {
   title: "residentApp | About",
   description: "ResidentApp about us page",
 };
